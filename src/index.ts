@@ -8,7 +8,7 @@ import { existsSync, readFileSync } from "fs";
 
 const server = new McpServer({ name: "mcp-pdf-extract", version: "1.0.0" });
 
-// Uses pdftotext (poppler) if available, falls back to basic extraction
+// Requires the Poppler program pdftotext. No other extractor is implemented.
 function extractWithPoppler(filePath: string, options: string[] = []): string {
   try {
     return execSync(`pdftotext ${options.join(" ")} "${filePath}" -`, { maxBuffer: 50 * 1024 * 1024 }).toString();
