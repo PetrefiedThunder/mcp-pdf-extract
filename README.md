@@ -79,4 +79,4 @@ npx mcp-pdf-extract
 
 ## License
 
-MIT
+Apache-2.0
